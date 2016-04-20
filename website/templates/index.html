@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <img src="{% static "images/vaffelbandy_603x532_trans.png" %}"
+                 style="max-height: 80%; max-width: 80%; height: auto; width: auto">
+
+            <h3>Blindern 30. august</h3>
+
+            <br>
+            {% for status in tournament_status %}
+                {% if status.signup %}
+                    <a href="#registration" class="btn btn-dark btn-lg">Påmeldingen er ÅPEN!</a>
+                {% endif %}
+                {% if status.pre_start %}
+                    <a href="#current_teams" class="btn btn-dark btn-lg">Se påmeldte lag!</a>
+                {% endif %}
+                {% if status.started %}
+                    <a href="{% url "results" %}" class="btn btn-dark btn-lg">Se oppsett og resultater!</a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <a href="#info"><i id="angle-down" class="fa fa-angle-down fa-5x" style="color: #C3D3CE; margin-top: 2em"></i></a>
+
+        </div>
+    </header>
+
+    <!-- Info -->
+    <section id="info" class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Informasjon</h1>
+
+                    <h3>Klasser</h3>
+
+                    <p>
+                        Det vil være tre klasser: dameklasse, herreklasse og åpen klasse.
+                        Keepere kan gå fritt imellom lag. Påmeldingsavgift er 750 kr per lag,
+                        studenter får redusert påmeldingsavgift i åpen klasse.</p>
+
+                    <p>For åpen klasse
+                        gjelder følgende begrensning: ingen lag kan ha mer enn 1 herrespiller
+                        som har hatt lisens i sesongen 2013 / 2014 eller tidligere.</p>
+
+                    <p>Vi ønsker yngre
+                        lag som ønsker å spille mot seniorer velkommen, men alle spillere må være
+                        fylt 15 år på turneringsdagen
+                    </p>
+
+                    <h3>Regler</h3>
+
+                    <p>
+                        Det kan være maksimalt 3 utespillere på banen + keeper, det er ellers ingen
+                        begrensing på antall spillere per lag. Banen vil være 20 x 10 meter. Åpen
+                        klasse spilles med små mål og uten keeper etter regelverket for
+                        bedriftsidretten.</p>
+
+                    <p>Innledende runder spilles med 12 minutters kamper.
+                        Sluttspillet arrangeres med kamper opp til 2x10 minutter
+                    </p>
+
+                    <h3>Påmelding</h3>
+
+                    <p>
+                        Påmelding skjer innen 8. august. Etteranmelding etter avtale.
+                        Ved spørsmål kontakt <a href="mailto:post@frederikscup.no">
+                        post@frederikscup.no</a> eller ring 99 62 45 44.
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Current teams -->
+    <section id="current_teams" class="current_teams">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    {% if current_teams|length > 0 %}
+                        <h1>Påmeldte lag</h1>
+
+                        <h3>Herrer</h3>
+                        {% for team in current_teams %}
+                            {% if team.tournament_class == "H" %}
+                                <p>{{ team.team_name }} ({{ team.team_from }})</p>
+                            {% endif %}
+                        {% endfor %}
+
+                        <h3>Damer</h3>
+                        {% for team in current_teams %}
+                            {% if team.tournament_class == "D" %}
+                                <p>{{ team.team_name }} ({{ team.team_from }})</p>
+                            {% endif %}
+                        {% endfor %}
+
+
+                        <h3>Åpen</h3>
+                        {% for team in current_teams %}
+                            {% if team.tournament_class == "A" %}
+                                <p>{{ team.team_name }} ({{ team.team_from }})</p>
+                            {% endif %}
+                        {% endfor %}
+
+                    {% endif %}
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+    <!-- Registration -->
+    {% include "new_reg.html" %}
+
+    <!-- /Form -->
+
+    <!-- Map -->
+    <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.15851565357!2d10.7243075!3d59.946104299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416de502f41109%3A0x564c4a10cd4f0221!2sAthletica+Domus!5e0!3m2!1sno!2sno!4v1435755267136"
+                width="600" height="450" frameborder="0" style="border:0; pointer-events:none" allowfullscreen>
+
+        </iframe>
+        <br/>
+        <small>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.15851565357!2d10.7243075!3d59.946104299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416de502f41109%3A0x564c4a10cd4f0221!2sAthletica+Domus!5e0!3m2!1sno!2sno!4v1435755267136"
+               width="600" height="450" frameborder="0" style="border:0" allowfullscreen></a>
+        </small>
+    </section>
+
+
+{% endblock %}

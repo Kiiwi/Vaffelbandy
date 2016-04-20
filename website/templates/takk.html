@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <br>
+                    <div class="alert alert-success">
+                        <h1>Takk for påmeldingen!</h1>
+
+                        <h3>Du vil snart motta en e-post fra oss med mer informasjon</h3>
+
+                        <form action="{% url 'home' %}#top">
+                            <input class="btn btn-default" type="submit" value="Tilbake">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

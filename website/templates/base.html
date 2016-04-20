@@ -1,0 +1,161 @@
+{% load  staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Frederikscup - en innebandyturnering i Oslo 30. august 2015.
+    Det vil være tre klasser: dameklasse, herreklasse og åpen klasse.
+    Påmeldingsavgift er 750 kr per lag, studenter får redusert påmeldingsavgift i åpen klasse.">
+    <meta name="author" content="OSI innebandy">
+    <meta name="keywords" content="Innebandy, turnering, Oslo, OSI, Frederikscup">
+    <meta property="og:title" content="Frederikscup - en innebandyturnering i Oslo"/>
+    <meta property="og:site_name" content="Frederikscup"/>
+    <meta property="og:url" content="http://www.frederikscup.no"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Frederikscup - en innebandyturnering i Oslo 30. august 2015. Det vil være tre klasser: dameklasse, herreklasse og åpen klasse. Påmeldingsavgift er 750 kr per lag, studenter får redusert påmeldingsavgift i åpen klasse."/>
+    <meta property="og:image" content="http://www.frederikscup.no/static/images/innebandy_web_kvadratmtekst.png"/>
+    <meta property="og:image" content="http://www.frederikscup.no/static/images/innebandy_mtekstfarge_web1.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <title>Frederikscup</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static "css/stylish-portfolio.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static  "css/main.css" %}">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static "images/favicons/apple-touch-icon-57x57.png" %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "images/favicons/apple-touch-icon-60x60.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "images/favicons/apple-touch-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "images/favicons/apple-touch-icon-76x76.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "images/favicons/apple-touch-icon-114x114.png" %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "images/favicons/apple-touch-icon-120x120.png" %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "images/favicons/apple-touch-icon-144x144.png" %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "images/favicons/apple-touch-icon-152x152.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "images/favicons/apple-touch-icon-180x180.png" %}">
+    <link rel="icon" type="image/png" href="{% static "images/favicons/favicon-32x32.png" %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static "images/favicons/android-chrome-192x192.png" %}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{% static "images/favicons/favicon-96x96.png" %}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{% static "images/favicons/favicon-16x16.png" %}" sizes="16x16">
+    <link rel="manifest" href="{% static "images/favicons/manifest.json" %}">
+    <link rel="shortcut icon" href="{% static "images/favicons/favicon.ico" %}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="{% static "images/favicons/mstile-144x144.png" %}">
+    <meta name="msapplication-config" content="{% static "images/favicons/browserconfig.xml" %}">
+    <meta name="theme-color" content="#ffffff">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+{% include "navigation.html" %}
+
+{% block content %}
+{% endblock %}
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>OSI Innebandy</strong>
+                </h4>
+
+                <p>Trimveien 4<br>Oslo</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i>99 62 45 44</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:post@frederikscup.no">post@frederikscup.no</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.facebook.com/osi.innebandy"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; www.osi-innebandy.no</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="{% static "js/jquery.js" %}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+
+    // Closes the sidebar menu
+    $("#menu-close").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+    // Disable map scrolling
+    $(document).ready(function () {
+        $('.map').click(function () {
+            $('.map iframe').css("pointer-events", "auto");
+        });
+
+        $(".map").mouseleave(function () {
+            $('.map iframe').css("pointer-events", "none");
+        });
+    });
+
+
+</script>
+
+</body>
+
+</html>
