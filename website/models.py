@@ -20,7 +20,7 @@ class Registration(models.Model):
     other = models.TextField(max_length=256, blank=True)
     timestamp = models.DateField(auto_now_add=True, auto_now=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.tournament_class + ' ' + self.team_name
 
 
@@ -32,7 +32,7 @@ class Team(models.Model):
                                         default="Herrer")
     timestamp = models.DateField(auto_now_add=True, auto_now=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.tournament_class + ' ' + self.team_name
 
 
@@ -45,5 +45,5 @@ class TournamentStatus(models.Model):
         verbose_name = "Tournament Status"
         verbose_name_plural = "Tournament Status"
 
-    def __unicode__(self):
+    def __str__(self):
         return "Status"
