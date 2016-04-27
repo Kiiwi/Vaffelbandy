@@ -29,7 +29,7 @@ def home(request):
 
         # Email information
         email_recipient = ["tommy.lee.ryan@gmail.com"]
-        email_subject = "[Frederikscup] %s" % team_name
+        email_subject = "[Vaffelbandy] %s" % team_name
         email_body = "Lagnavn: %s" \
                      "\nFra: %s" \
                      "\nKlasse: %s" \

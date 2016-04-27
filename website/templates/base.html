@@ -8,23 +8,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Frederikscup - en innebandyturnering i Oslo 30. august 2015.
-    Det vil være tre klasser: dameklasse, herreklasse og åpen klasse.
-    Påmeldingsavgift er 750 kr per lag, studenter får redusert påmeldingsavgift i åpen klasse.">
-    <meta name="author" content="OSI innebandy">
-    <meta name="keywords" content="Innebandy, turnering, Oslo, OSI, Frederikscup">
-    <meta property="og:title" content="Frederikscup - en innebandyturnering i Oslo"/>
-    <meta property="og:site_name" content="Frederikscup"/>
-    <meta property="og:url" content="http://www.frederikscup.no"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:description"
-          content="Frederikscup - en innebandyturnering i Oslo 30. august 2015. Det vil være tre klasser: dameklasse, herreklasse og åpen klasse. Påmeldingsavgift er 750 kr per lag, studenter får redusert påmeldingsavgift i åpen klasse."/>
-    <meta property="og:image" content="http://www.frederikscup.no/static/images/innebandy_web_kvadratmtekst.png"/>
-    <meta property="og:image" content="http://www.frederikscup.no/static/images/innebandy_mtekstfarge_web1.png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
 
-    <title>Frederikscup</title>
+    <!-- for Google -->
+    <meta name="description"
+          content="Vaffelbandy er en innebandyturnering i Oslo 20. august. Her kan alle delta! Det blir sport, moro og naturligvis vafler! "/>
+    <meta name="keywords" content="Innebandy Oslo akershus student idrett blindern turnering vafler høst sommer"/>
+
+    <meta name="author" content="OSI Innebandy"/>
+    <meta name="copyright" content="OSI Innebandy"/>
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="Vaffelbandy">
+    <meta property="og:image" content="http://www.vaffelbandy.no/static/img/favicons/fav.png">
+    <meta property="og:image:width" content="260">
+    <meta property="og:image:height" content="260">
+    <meta property="og:site_name" content="Vaffelbandy">
+    <meta property="og:url" content="http://vaffelbandy.no/">
+    <meta property="og:description"
+          content="Vaffelbandy er en innebandyturnering i Oslo 20. august. Her kan alle delta! Det blir sport, moro og naturligvis vafler! ">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="">
+
+    <title>{% block title %}{% endblock %} | Vaffelbandy</title>
 
     <!-- Bootstrap Core CSS -->
 
@@ -40,25 +45,27 @@
           rel="stylesheet" type="text/css">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{% static "images/favicons/apple-touch-icon-57x57.png" %}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{% static "images/favicons/apple-touch-icon-60x60.png" %}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{% static "images/favicons/apple-touch-icon-72x72.png" %}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static "images/favicons/apple-touch-icon-76x76.png" %}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{% static "images/favicons/apple-touch-icon-114x114.png" %}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{% static "images/favicons/apple-touch-icon-120x120.png" %}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{% static "images/favicons/apple-touch-icon-144x144.png" %}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{% static "images/favicons/apple-touch-icon-152x152.png" %}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static "images/favicons/apple-touch-icon-180x180.png" %}">
-    <link rel="icon" type="image/png" href="{% static "images/favicons/favicon-32x32.png" %}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{% static "images/favicons/android-chrome-192x192.png" %}" sizes="192x192">
-    <link rel="icon" type="image/png" href="{% static "images/favicons/favicon-96x96.png" %}" sizes="96x96">
-    <link rel="icon" type="image/png" href="{% static "images/favicons/favicon-16x16.png" %}" sizes="16x16">
-    <link rel="manifest" href="{% static "images/favicons/manifest.json" %}">
-    <link rel="shortcut icon" href="{% static "images/favicons/favicon.ico" %}">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="{% static "images/favicons/mstile-144x144.png" %}">
-    <meta name="msapplication-config" content="{% static "images/favicons/browserconfig.xml" %}">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-touch-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'images/favicons/apple-touch-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/favicons/apple-touch-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-touch-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'images/favicons/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-touch-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/favicons/apple-touch-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-touch-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/favicons/favicon-32x32.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static 'images/favicons/favicon-194x194.png' %}" sizes="194x194">
+    <link rel="icon" type="image/png" href="{% static 'images/favicons/favicon-96x96.png' %}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{% static 'images/favicons/android-chrome-192x192.png' %}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{% static 'images/favicons/favicon-16x16.png' %}" sizes="16x16">
+    <link rel="manifest" href="{% static 'images/favicons/manifest.json' %}">
+    <link rel="mask-icon" href="{% static 'images/favicons/safari-pinned-tab.svg' %}" color="#fbb036">
+    <meta name="msapplication-TileColor" content="#fbb036">
+    <meta name="msapplication-TileImage" content="{% static 'images/favicons/mstile-144x144.png' %}">
+    <meta name="theme-color" content="#fbb036">
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -107,8 +114,8 @@
 <!-- jQuery -->
 <script src="{% static "js/jquery.js" %}"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="{% static "js/bootstrap.min.js" %}"></script>
+<!--Bootstrap Core JavaScript -->
+<script src = "{% static "js/bootstrap.min.js" %}" ></script>
 
 <!-- Custom Theme JavaScript -->
 <script>
