@@ -19,6 +19,9 @@
         <li>
             <a href="{% url 'home' %}#info" onclick=$("#menu-close").click();>Info</a>
         </li>
+        <li>
+            <a href="{% url 'home' %}#rules" onclick=$("#menu-close").click();>Regler</a>
+        </li>
         {% for status in tournament_status %}
             {% if status.signup %}
                 <li>
