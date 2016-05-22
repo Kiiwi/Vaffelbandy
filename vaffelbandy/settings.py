@@ -12,9 +12,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = "mu-drjpz1znf$wnvo=mq19gpp7+*p+x%v6!0yj_mzyj$9=yvv+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 # Application definition
 
