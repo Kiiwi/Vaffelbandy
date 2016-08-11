@@ -6,6 +6,7 @@ CLASS_CHOICES = (
     ('H', 'Herrer'),
     ('D', 'Damer'),
     ('A', 'Åpen'),
+    ('E', 'EL')
 )
 
 

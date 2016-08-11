@@ -42,7 +42,7 @@
                 <h3>Klasser</h3>
 
                 <p>
-                    Det vil være tre klasser: dameklasse, herreklasse og åpen klasse.
+                    Det vil være fire klasser: dameklasse, herreklasse, åpen klasse og EL-innebandy.
                     Keepere kan gå fritt imellom lag. Påmeldingsavgift er 900 kr per lag,
                     studenter får redusert påmeldingsavgift i åpen klasse.
                 </p>
@@ -62,7 +62,7 @@
                 <h3>Påmelding</h3>
 
                 <p>
-                    Påmelding skjer innen 6. august. Etteranmelding etter avtale.
+                    Påmelding skjer innen 18. august. Etteranmelding etter avtale.
                     Ved spørsmål kontakt <a href="mailto:post@vaffelbandy.no">
                     post@vaffelbandy.no</a> eller ring 99 62 45 44.
                 </p>
@@ -188,6 +188,14 @@
                 <h3>Åpen</h3>
                 {% for team in current_teams %}
                 {% if team.tournament_class == "A" %}
+                <p>{{ team.team_name }} ({{ team.team_from }})</p>
+                {% endif %}
+                {% endfor %}
+
+
+                <h3>EL</h3>
+                {% for team in current_teams %}
+                {% if team.tournament_class == "E" %}
                 <p>{{ team.team_name }} ({{ team.team_from }})</p>
                 {% endif %}
                 {% endfor %}
