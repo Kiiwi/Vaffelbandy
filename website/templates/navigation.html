@@ -16,6 +16,13 @@
                 </li>
             {% endif %}
         {% endfor %}
+        {% for status in tournament_status %}
+            {% if status.started %}
+                <li>
+                    <a href="{% url 'results' %}" onclick=$("#menu-close").click();>Oppsett/Resultater</a>
+                </li>
+            {% endif %}
+        {% endfor %}
         <li>
             <a href="{% url 'home' %}#info" onclick=$("#menu-close").click();>Info</a>
         </li>
