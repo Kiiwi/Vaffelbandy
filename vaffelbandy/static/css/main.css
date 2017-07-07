@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .bg-primary {
-    background-color: #FBB036;
+    background-color: #fbb04c;
     color: #ffffff;
 }
 
@@ -14,7 +14,7 @@
 
 .current_teams {
     font-size: 150%;
-    background-color: #f15623;
+    background-color: #f26122;
     color: #ffffff;
 }
 
@@ -33,11 +33,11 @@
 }
 
 .header {
-    color: #F15623;
+    color: #f26122;
 }
 
 .btn-dark {
-    background-color: #F15623;
+    background-color: #f26122;
 }
 
 .btn-dark:hover {
@@ -53,7 +53,7 @@
 }
 
 #sidebar-wrapper {
-    background-color: #FBB036;
+    background-color: #fbb04c;
 }
 
 .sidebar-nav > .sidebar-brand a {

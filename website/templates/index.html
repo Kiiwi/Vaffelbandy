@@ -8,10 +8,10 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-        <img src="{% static 'images/vaffelbandy_603x532_trans.png' %}"
-             style="max-height: 80%; max-width: 80%; height: auto; width: auto">
+        <img src="{% static 'images/logo_test.png' %}"
+             style="max-height: 50%; max-width: 50%; height: auto; width: auto">
 
-        <h3>Blindern 20. august</h3>
+        <h3>Blindern 26. august</h3>
 
         <br>
         {% for status in tournament_status %}
@@ -42,14 +42,14 @@
                 <h3>Klasser</h3>
 
                 <p>
-                    Det vil være fire klasser: dameklasse, herreklasse, åpen klasse og EL-innebandy.
+                    Det vil være tre klasser: dameklasse, herreklasse og åpen klasse.
                     Keepere kan gå fritt imellom lag. Påmeldingsavgift er 900 kr per lag,
                     studenter får redusert påmeldingsavgift i åpen klasse.
                 </p>
 
                 <p>
                     For åpen klasse gjelder følgende begrensning: ingen lag kan ha mer enn 1
-                    herrespiller som har hatt lisens i sesongen 2014 / 2015 eller tidligere.
+                    herrespiller som har hatt lisens i sesongen 2015 / 2016 eller tidligere.
                     Åpen klasse er en klasse først og fremst for nybegynnere.
                 </p>
 
@@ -64,7 +64,7 @@
                 <p>
                     Påmelding skjer innen 18. august. Etteranmelding etter avtale.
                     Ved spørsmål kontakt <a href="mailto:post@vaffelbandy.no">
-                    post@vaffelbandy.no</a> eller ring 99 62 45 44.
+                    post@vaffelbandy.no</a> eller ring 97 60 37 89.
                 </p>
                 <br>
             </div>
@@ -192,14 +192,6 @@
                 {% endif %}
                 {% endfor %}
 
-
-                <h3>EL</h3>
-                {% for team in current_teams %}
-                {% if team.tournament_class == "E" %}
-                <p>{{ team.team_name }} ({{ team.team_from }})</p>
-                {% endif %}
-                {% endfor %}
-
                 {% endif %}
             </div>
         </div>
@@ -217,13 +209,13 @@
 <!-- Map -->
 <section id="contact" class="map">
     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.4995288369362!2d10.71984802321012!3d59.94044635691782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416de6fb7ad3a7%3A0xfe131b270567017!2sProblemveien+13%2C+0313+Oslo!5e0!3m2!1sno!2sno!4v1462270929062"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.1268731770174!2d10.722012516097307!3d59.946629281879076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416de45de6f73d%3A0xb871f29f14866039!2sTrimveien+4%2C+0856+Oslo!5e0!3m2!1sno!2sno!4v1499429530758"
             width="600" height="450" frameborder="0" style="border:0; pointer-events:none" allowfullscreen>
 
     </iframe>
     <br/>
     <small>
-        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.4995288369362!2d10.71984802321012!3d59.94044635691782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416de6fb7ad3a7%3A0xfe131b270567017!2sProblemveien+13%2C+0313+Oslo!5e0!3m2!1sno!2sno!4v1462270929062"
+        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.1268731770174!2d10.722012516097307!3d59.946629281879076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416de45de6f73d%3A0xb871f29f14866039!2sTrimveien+4%2C+0856+Oslo!5e0!3m2!1sno!2sno!4v1499429530758"
            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></a>
     </small>
 </section>
