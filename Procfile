@@ -1,0 +1,1 @@
+web: gunicorn vaffelbandy.wsgi --log-file -

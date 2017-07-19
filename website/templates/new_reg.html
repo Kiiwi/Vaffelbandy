@@ -1,0 +1,118 @@
+{% for status in tournament_status %}
+    {% if status.signup %}
+        <section id="registration" class="services bg-primary">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2>Påmelding</h2>
+
+                        <form class="form-horizontal" method="post" action="#registration">{% csrf_token %}
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Lagnavn">Lagnavn</label>
+
+                                <div class="col-md-4">
+                                    {% if form.team_name.errors %}
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputWarning1"><strong>Feltet må fylles
+                                                ut</strong></label>
+                                            {{ form.team_name }}
+                                        </div>
+                                    {% else %}
+                                        {{ form.team_name }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Fra">Fra</label>
+
+                                <div class="col-md-4">
+                                    {% if form.team_from.errors %}
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputWarning1"><strong>Feltet må fylles
+                                                ut</strong></label>
+                                            {{ form.team_from }}
+                                        </div>
+                                    {% else %}
+                                        {{ form.team_from }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Klasse">Klasse</label>
+
+                                <div class="col-md-4">
+                                    {% if form.tournament_class.errors %}
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputWarning1"><strong>Feltet må fylles
+                                                ut</strong></label>
+                                            {{ form.tournament_class }}
+                                        </div>
+                                    {% else %}
+                                        {{ form.tournament_class }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Telefon">Telefon</label>
+
+                                <div class="col-md-4">
+                                    {% if form.phone.errors %}
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputWarning1"><strong>Feltet må fylles
+                                                ut</strong></label>
+                                            {{ form.phone }}
+                                        </div>
+                                    {% else %}
+                                        {{ form.phone }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Lagnavn">Epost</label>
+
+                                <div class="col-md-4">
+                                    {% if form.email.errors %}
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputWarning1"><strong>Feltet må fylles
+                                                ut</strong></label>
+                                            {{ form.email }}
+                                        </div>
+                                    {% else %}
+                                        {{ form.email }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Annet">Annet</label>
+
+                                <div class="col-md-4">
+                                    {% if form.other.errors %}
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputWarning1"><strong>Feltet må fylles
+                                                ut</strong></label>
+                                            {{ form.other }}
+                                        </div>
+                                    {% else %}
+                                        {{ form.other }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <button id="meldpå" name="meldpå" class="btn btn-success" type="submit">
+                                Meld meg på!
+                            </button>
+
+                        </form>
+                        <p>Påmeldingsfristen er 18. august</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endfor %}
