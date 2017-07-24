@@ -27,8 +27,8 @@ def home(request):
         other = form.cleaned_data["other"]
         #messages.success(request, "success message")  # Django message
 
-        # Email information
-        email_recipient = ["tommy.lee.ryan@gmail.com"]
+        # Email to admin information
+        email_recipient = ["vaffelbandy@gmail.com"]
         email_subject = "[Vaffelbandy] %s" % team_name
         email_body = "Lagnavn: %s" \
                      "\nFra: %s" \
@@ -37,7 +37,17 @@ def home(request):
                      "\nE-post: %s" \
                      "\nAnnet: %s" % (team_name, team_from, tournament_class,
                                       phone, email, other)
-        send_mail(email_subject, email_body, 'tommy.lee.ryan@gmail.com',
+        send_mail(email_subject, email_body, 'vaffelbandy@gmail.com',
+                  email_recipient, fail_silently=False)
+
+        # Email to team information
+        email_recipient = [email]
+        email_subject = "[Vaffelbandy] Takk for påmeldingen %s!" % team_name
+        email_body = "Vi har nå mottatt din påmelding til Vaffelbandy 2017." \
+                     "\nNB! Deltakeravgiften må være betalt innen fristen! Betalingsfrist 18. august." \
+                     "\nKontonr: 1503.52.02312" \
+                     "\nHusk å merke betalingen med 'Vaffelbandy påmeldingsavgift <lagnavn>'."
+        send_mail(email_subject, email_body, 'vaffelbandy@gmail.com',
                   email_recipient, fail_silently=False)
 
         return HttpResponseRedirect("takk")
