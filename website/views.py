@@ -44,7 +44,7 @@ def home(request):
         email_recipient = [email]
         email_subject = "[Vaffelbandy] Takk for påmeldingen %s!" % team_name
         email_body = "Vi har nå mottatt din påmelding til Vaffelbandy 2017." \
-                     "\nNB! Deltakeravgiften må være betalt innen fristen! Betalingsfrist 18. august." \
+                     "\nNB! Deltakeravgiften (700 kr) må være betalt innen fristen! Betalingsfrist 18. august." \
                      "\nKontonr: 1503.52.02312" \
                      "\nHusk å merke betalingen med 'Vaffelbandy påmeldingsavgift <lagnavn>'."
         send_mail(email_subject, email_body, 'vaffelbandy@gmail.com',
